@@ -1,0 +1,20 @@
+{
+  "name": "hub-api",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "eval $(cat .env.development) nodemon --exec babel-node -- ./src/index.js"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.0.0-beta.32",
+    "@babel/node": "^7.0.0-beta.32",
+    "@babel/preset-env": "^7.0.0-beta.32",
+    "nodemon": "^1.12.1"
+  },
+  "dependencies": {
+    "axios": "^0.17.1",
+    "litera": "^1.0.1",
+    "litera-router": "^1.0.2"
+  }
+}
