@@ -552,6 +552,16 @@ axios@^0.17.1:
     follow-redirects "^1.2.5"
     is-buffer "^1.1.5"
 
+babel-plugin-module-resolver@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/babel-plugin-module-resolver/-/babel-plugin-module-resolver-3.0.0.tgz#a2fe5b97f7b809a8bbac18beada0a94d45987c63"
+  dependencies:
+    find-babel-config "^1.1.0"
+    glob "^7.1.2"
+    pkg-up "^2.0.0"
+    reselect "^3.0.1"
+    resolve "^1.4.0"
+
 babel-plugin-syntax-object-rest-spread@^6.8.0:
   version "6.13.0"
   resolved "https://registry.yarnpkg.com/babel-plugin-syntax-object-rest-spread/-/babel-plugin-syntax-object-rest-spread-6.13.0.tgz#fd6536f2bce13836ffa3a5458c4903a597bb3bf5"
@@ -910,6 +920,13 @@ fill-range@^2.1.0:
     repeat-element "^1.1.2"
     repeat-string "^1.5.2"
 
+find-babel-config@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/find-babel-config/-/find-babel-config-1.1.0.tgz#acc01043a6749fec34429be6b64f542ebb5d6355"
+  dependencies:
+    json5 "^0.5.1"
+    path-exists "^3.0.0"
+
 find-cache-dir@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/find-cache-dir/-/find-cache-dir-1.0.0.tgz#9288e3e9e3cc3748717d39eade17cf71fc30ee6f"
@@ -1024,7 +1041,7 @@ glob-parent@^2.0.0:
   dependencies:
     is-glob "^2.0.0"
 
-glob@^7.0.5:
+glob@^7.0.5, glob@^7.1.2:
   version "7.1.2"
   resolved "https://registry.yarnpkg.com/glob/-/glob-7.1.2.tgz#c19c9df9a028702d678612384a6552404c636d15"
   dependencies:
@@ -1311,7 +1328,7 @@ json-stringify-safe@~5.0.1:
   version "5.0.1"
   resolved "https://registry.yarnpkg.com/json-stringify-safe/-/json-stringify-safe-5.0.1.tgz#1296a2d58fd45f19a0f6ce01d65701e2c735b6eb"
 
-json5@^0.5.0:
+json5@^0.5.0, json5@^0.5.1:
   version "0.5.1"
   resolved "https://registry.yarnpkg.com/json5/-/json5-0.5.1.tgz#1eade7acc012034ad84e2396767ead9fa5495821"
 
@@ -1347,18 +1364,18 @@ latest-version@^3.0.0:
     package-json "^4.0.0"
 
 litera-body-parser@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/litera-body-parser/-/litera-body-parser-1.0.1.tgz#7fd3753599f2bc38c3ac12fff913436a619085c3"
+  version "1.1.9"
+  resolved "https://registry.yarnpkg.com/litera-body-parser/-/litera-body-parser-1.1.9.tgz#7987023a1e79facd599e573bb5a7df7639a7aeb1"
   dependencies:
     content-type "^1.0.4"
 
 litera-cors@^1.0.2:
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/litera-cors/-/litera-cors-1.0.2.tgz#a9c7bbdff13cba14026eda45dff787f4c1df220f"
+  version "1.1.11"
+  resolved "https://registry.yarnpkg.com/litera-cors/-/litera-cors-1.1.11.tgz#286c2bbdb4a88286dc8ba4f55f6b293693a8c802"
 
 litera-error-handler@^1.1.10:
-  version "1.1.10"
-  resolved "https://registry.yarnpkg.com/litera-error-handler/-/litera-error-handler-1.1.10.tgz#1fabcd9f30bef7c66b7633ddc266751ad432a7b7"
+  version "1.1.12"
+  resolved "https://registry.yarnpkg.com/litera-error-handler/-/litera-error-handler-1.1.12.tgz#59941a329d5ed59cf7fcb1baef2a2e5a243d5ed9"
 
 litera-router@^1.0.2:
   version "1.0.2"
@@ -1368,8 +1385,8 @@ litera-router@^1.0.2:
     url-pattern "^1.0.3"
 
 litera@^1.0.5:
-  version "1.0.5"
-  resolved "https://registry.yarnpkg.com/litera/-/litera-1.0.5.tgz#2aeb9263ede94387d32243d3df104f3ebbbb881c"
+  version "1.1.7"
+  resolved "https://registry.yarnpkg.com/litera/-/litera-1.1.7.tgz#ddd929d6ff9e1ac15039854c026ad8285d0c3acc"
   dependencies:
     is-plain-object "^2.0.4"
 
@@ -1736,6 +1753,12 @@ pkg-dir@^2.0.0:
   dependencies:
     find-up "^2.1.0"
 
+pkg-up@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/pkg-up/-/pkg-up-2.0.0.tgz#c819ac728059a461cab1c3889a2be3c49a004d7f"
+  dependencies:
+    find-up "^2.1.0"
+
 prepend-http@^1.0.1:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/prepend-http/-/prepend-http-1.0.4.tgz#d4f4562b0ce3696e41ac52d0e002e57a635dc6dc"
@@ -1911,7 +1934,11 @@ request@2.81.0:
     tunnel-agent "^0.6.0"
     uuid "^3.0.0"
 
-resolve@^1.3.2:
+reselect@^3.0.1:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/reselect/-/reselect-3.0.1.tgz#efdaa98ea7451324d092b2b2163a6a1d7a9a2147"
+
+resolve@^1.3.2, resolve@^1.4.0:
   version "1.5.0"
   resolved "https://registry.yarnpkg.com/resolve/-/resolve-1.5.0.tgz#1f09acce796c9a762579f31b2c1cc4c3cddf9f36"
   dependencies:
