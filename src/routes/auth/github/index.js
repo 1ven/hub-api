@@ -4,9 +4,8 @@ import axios from "axios";
 import { method, fork } from "litera-router";
 
 export default fork(
-  method("GET", () => async req => {
-    const { query } = url.parse(req.url);
-    const { code } = queryString.parse(query);
+  method("POST", () => async req => {
+    const { code } = req.body;
     const { GITHUB_CLIENT_ID, GITHUB_CLIENT_SECRET } = process.env;
 
     const response = await axios({
@@ -23,12 +22,13 @@ export default fork(
     });
 
     return {
-      status: 301,
+      status: 200,
       headers: {
-        Location: `http://localhost:3000/auth/github/set-token?access_token=${
-          response.data.access_token
-        }`
-      }
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        access_token: response.data.access_token
+      })
     };
   })
 );

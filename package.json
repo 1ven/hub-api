@@ -10,11 +10,16 @@
     "@babel/core": "^7.0.0-beta.32",
     "@babel/node": "^7.0.0-beta.32",
     "@babel/preset-env": "^7.0.0-beta.32",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "nodemon": "^1.12.1"
   },
   "dependencies": {
     "axios": "^0.17.1",
-    "litera": "^1.0.1",
-    "litera-router": "^1.0.2"
+    "litera": "^1.0.5",
+    "litera-body-parser": "^1.0.1",
+    "litera-cors": "^1.0.2",
+    "litera-error-handler": "^1.1.10",
+    "litera-router": "^1.0.2",
+    "ramda": "^0.25.0"
   }
 }
