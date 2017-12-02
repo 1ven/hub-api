@@ -23,6 +23,7 @@
     "litera-querystring": "^1.1.17",
     "litera-redirect": "^1.7.0",
     "litera-router": "^1.0.2",
+    "node-fetch": "^1.7.3",
     "ramda": "^0.25.0",
     "url-join": "^2.0.2"
   }
