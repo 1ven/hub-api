@@ -17,7 +17,7 @@ export default fork(
 
         return merge(
           withRedirect(
-            `https://github.com/login/oauth/authorize?scope=user:email&client_id=${
+            `https://github.com/login/oauth/authorize?scope=user:email%20read:org&client_id=${
               GITHUB_CLIENT_ID
             }`
           ),
