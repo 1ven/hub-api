@@ -4,10 +4,10 @@ import { adapter } from "litera";
 import router from "litera-router";
 import errorHandler from "litera-error-handler";
 import cors from "litera-cors";
-import routes from "./routes";
+import app from "./application";
 
-const app = compose(errorHandler(), cors())(router(routes));
+const atom = compose(errorHandler(), cors())(router(app));
 
-http.createServer(adapter(app)).listen(8080, () => {
+http.createServer(adapter(atom)).listen(8080, () => {
   console.log("Listening at 8080");
 });
