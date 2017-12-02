@@ -746,13 +746,13 @@ console-control-strings@^1.0.0, console-control-strings@~1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/console-control-strings/-/console-control-strings-1.1.0.tgz#3d7cf4464db6446ea644bf4b39507f9851008e8e"
 
-content-type@^1.0.4:
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/content-type/-/content-type-1.0.4.tgz#e138cc75e040c727b1966fe5e5f8c9aee256fe3b"
-
 convert-source-map@^1.1.0:
   version "1.5.1"
   resolved "https://registry.yarnpkg.com/convert-source-map/-/convert-source-map-1.5.1.tgz#b8278097b9bc229365de5c62cf5fcaed8b5599e5"
+
+cookie@^0.3.1:
+  version "0.3.1"
+  resolved "https://registry.yarnpkg.com/cookie/-/cookie-0.3.1.tgz#e7e0a1f9ef43b4c8ba925c5c5a96e806d16873bb"
 
 core-js@^2.4.0:
   version "2.5.1"
@@ -807,6 +807,10 @@ debug@^3.0.1, debug@^3.1.0:
 deep-extend@~0.4.0:
   version "0.4.2"
   resolved "https://registry.yarnpkg.com/deep-extend/-/deep-extend-0.4.2.tgz#48b699c27e334bf89f10892be432f6e4c7d34a7f"
+
+deepmerge@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/deepmerge/-/deepmerge-2.0.1.tgz#25c1c24f110fb914f80001b925264dd77f3f4312"
 
 delayed-stream@~1.0.0:
   version "1.0.0"
@@ -1363,11 +1367,11 @@ latest-version@^3.0.0:
   dependencies:
     package-json "^4.0.0"
 
-litera-body-parser@^1.0.1:
-  version "1.1.9"
-  resolved "https://registry.yarnpkg.com/litera-body-parser/-/litera-body-parser-1.1.9.tgz#7987023a1e79facd599e573bb5a7df7639a7aeb1"
+litera-cookie@^1.6.0:
+  version "1.6.0"
+  resolved "https://registry.yarnpkg.com/litera-cookie/-/litera-cookie-1.6.0.tgz#adff4c4ddc8e53936cf85fe07e8376316a5faade"
   dependencies:
-    content-type "^1.0.4"
+    cookie "^0.3.1"
 
 litera-cors@^1.0.2:
   version "1.1.11"
@@ -1377,6 +1381,14 @@ litera-error-handler@^1.1.10:
   version "1.1.12"
   resolved "https://registry.yarnpkg.com/litera-error-handler/-/litera-error-handler-1.1.12.tgz#59941a329d5ed59cf7fcb1baef2a2e5a243d5ed9"
 
+litera-querystring@^1.1.17:
+  version "1.1.17"
+  resolved "https://registry.yarnpkg.com/litera-querystring/-/litera-querystring-1.1.17.tgz#59cf86a2aa7fe366305d4740be6cea4c4ff307a0"
+
+litera-redirect@^1.7.0:
+  version "1.7.0"
+  resolved "https://registry.yarnpkg.com/litera-redirect/-/litera-redirect-1.7.0.tgz#a469a96517a4d5ae4cc91c593556d72aa737f9a1"
+
 litera-router@^1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/litera-router/-/litera-router-1.0.2.tgz#08024e2269b3a919f174c0485dcaa2dce115b02b"
@@ -1385,9 +1397,10 @@ litera-router@^1.0.2:
     url-pattern "^1.0.3"
 
 litera@^1.0.5:
-  version "1.1.7"
-  resolved "https://registry.yarnpkg.com/litera/-/litera-1.1.7.tgz#ddd929d6ff9e1ac15039854c026ad8285d0c3acc"
+  version "1.1.16"
+  resolved "https://registry.yarnpkg.com/litera/-/litera-1.1.16.tgz#6288d5bb8e5fd2cf04ee0c6eb03607bb1247d7f0"
   dependencies:
+    deepmerge "^2.0.1"
     is-plain-object "^2.0.4"
 
 locate-path@^2.0.0:
@@ -2194,6 +2207,10 @@ update-notifier@^2.2.0:
     latest-version "^3.0.0"
     semver-diff "^2.0.0"
     xdg-basedir "^3.0.0"
+
+url-join@^2.0.2:
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/url-join/-/url-join-2.0.2.tgz#c072756967ad24b8b59e5741551caac78f50b8b7"
 
 url-parse-lax@^1.0.0:
   version "1.0.0"

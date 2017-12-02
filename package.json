@@ -17,10 +17,13 @@
   "dependencies": {
     "axios": "^0.17.1",
     "litera": "^1.0.5",
-    "litera-body-parser": "^1.0.1",
+    "litera-cookie": "^1.6.0",
     "litera-cors": "^1.0.2",
     "litera-error-handler": "^1.1.10",
+    "litera-querystring": "^1.1.17",
+    "litera-redirect": "^1.7.0",
     "litera-router": "^1.0.2",
-    "ramda": "^0.25.0"
+    "ramda": "^0.25.0",
+    "url-join": "^2.0.2"
   }
 }
