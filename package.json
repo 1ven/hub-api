@@ -4,7 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "start": "eval $(cat .env.development) nodemon --exec babel-node -- ./src/index.js",
+    "start": "eval $(cat .env.staging) nodemon --exec babel-node -- ./src/index.js",
     "pg": "postgres -D /usr/local/var/postgres -p 5432"
   },
   "devDependencies": {
