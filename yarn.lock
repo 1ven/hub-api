@@ -1377,12 +1377,12 @@ litera-cookie@^1.6.0:
     cookie "^0.3.1"
 
 litera-cors@^1.0.2:
-  version "1.8.0"
-  resolved "https://registry.yarnpkg.com/litera-cors/-/litera-cors-1.8.0.tgz#40b5bde723dd3a892444df012044cf4674de9dd9"
+  version "1.8.1"
+  resolved "https://registry.yarnpkg.com/litera-cors/-/litera-cors-1.8.1.tgz#958f0fbd6fa9d6a0d433361cad56e26fe2404054"
 
 litera-error-handler@^1.1.10:
-  version "1.8.0"
-  resolved "https://registry.yarnpkg.com/litera-error-handler/-/litera-error-handler-1.8.0.tgz#21e777a6f57ca8fbbd96c48b27d7c4b3a0e82b6c"
+  version "1.8.1"
+  resolved "https://registry.yarnpkg.com/litera-error-handler/-/litera-error-handler-1.8.1.tgz#182401978125690d6a07fc946ba6a8faeec107e7"
 
 litera-querystring@^1.1.17:
   version "1.1.17"
@@ -1393,8 +1393,8 @@ litera-redirect@^1.7.0:
   resolved "https://registry.yarnpkg.com/litera-redirect/-/litera-redirect-1.7.0.tgz#a469a96517a4d5ae4cc91c593556d72aa737f9a1"
 
 litera-router@^1.0.2:
-  version "1.8.0"
-  resolved "https://registry.yarnpkg.com/litera-router/-/litera-router-1.8.0.tgz#6ee2332db4fc0947c020208990daca659bf9fb58"
+  version "1.8.1"
+  resolved "https://registry.yarnpkg.com/litera-router/-/litera-router-1.8.1.tgz#832c700179ca98136ebdfdcdf19750535cf770ce"
   dependencies:
     lodash.omit "^4.5.0"
     url-pattern "^1.0.3"
