@@ -16,7 +16,6 @@
   },
   "dependencies": {
     "axios": "^0.17.1",
-    "bookshelf": "^0.12.0",
     "knex": "^0.14.2",
     "litera": "^1.0.5",
     "litera-cookie": "^1.6.0",
