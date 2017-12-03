@@ -1381,8 +1381,8 @@ litera-cors@^1.0.2:
   resolved "https://registry.yarnpkg.com/litera-cors/-/litera-cors-1.8.1.tgz#958f0fbd6fa9d6a0d433361cad56e26fe2404054"
 
 litera-error-handler@^1.1.10:
-  version "1.8.1"
-  resolved "https://registry.yarnpkg.com/litera-error-handler/-/litera-error-handler-1.8.1.tgz#182401978125690d6a07fc946ba6a8faeec107e7"
+  version "1.9.1"
+  resolved "https://registry.yarnpkg.com/litera-error-handler/-/litera-error-handler-1.9.1.tgz#fc6a414026a1d67089ac56a020605482117a547b"
 
 litera-querystring@^1.1.17:
   version "1.1.17"
@@ -1392,9 +1392,15 @@ litera-redirect@^1.7.0:
   version "1.7.0"
   resolved "https://registry.yarnpkg.com/litera-redirect/-/litera-redirect-1.7.0.tgz#a469a96517a4d5ae4cc91c593556d72aa737f9a1"
 
+litera-response-body@^1.9.0:
+  version "1.9.0"
+  resolved "https://registry.yarnpkg.com/litera-response-body/-/litera-response-body-1.9.0.tgz#c2790e7d6767751a37eef61fac17fd6552dded21"
+  dependencies:
+    mime-types "^2.1.17"
+
 litera-router@^1.0.2:
-  version "1.8.1"
-  resolved "https://registry.yarnpkg.com/litera-router/-/litera-router-1.8.1.tgz#832c700179ca98136ebdfdcdf19750535cf770ce"
+  version "1.9.2"
+  resolved "https://registry.yarnpkg.com/litera-router/-/litera-router-1.9.2.tgz#60ad057ff2a8c004fb711ba381c11d0e5aab2e16"
   dependencies:
     lodash.omit "^4.5.0"
     url-pattern "^1.0.3"
@@ -1536,7 +1542,7 @@ mime-db@~1.30.0:
   version "1.30.0"
   resolved "https://registry.yarnpkg.com/mime-db/-/mime-db-1.30.0.tgz#74c643da2dd9d6a45399963465b26d5ca7d71f01"
 
-mime-types@^2.1.12, mime-types@~2.1.7:
+mime-types@^2.1.12, mime-types@^2.1.17, mime-types@~2.1.7:
   version "2.1.17"
   resolved "https://registry.yarnpkg.com/mime-types/-/mime-types-2.1.17.tgz#09d7a393f03e995a79f8af857b70a9e0ab16557a"
   dependencies:
