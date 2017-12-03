@@ -4,7 +4,8 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "start": "eval $(cat .env.development) nodemon --exec babel-node -- ./src/index.js"
+    "start": "eval $(cat .env.development) nodemon --exec babel-node -- ./src/index.js",
+    "pg": "postgres -D /usr/local/var/postgres -p 5432"
   },
   "devDependencies": {
     "@babel/core": "^7.0.0-beta.32",
@@ -16,6 +17,8 @@
   },
   "dependencies": {
     "axios": "^0.17.1",
+    "bookshelf": "^0.12.0",
+    "knex": "^0.14.2",
     "litera": "^1.0.5",
     "litera-cookie": "^1.6.0",
     "litera-cors": "^1.0.2",
