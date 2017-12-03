@@ -1,9 +1,4 @@
-import k from "knex";
+import knex from "knex";
+import knexfile from "../../../knexfile";
 
-export const knex = k({
-  client: "pg",
-  connection: process.env.POSTGRES_CONNECTION,
-  migrations: {
-    tableName: "knex_migrations"
-  }
-});
+export const db = knex(knexfile);
