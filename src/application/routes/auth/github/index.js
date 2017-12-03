@@ -12,7 +12,7 @@ export default fork(
   method(
     "GET",
     fork(
-      match("/", () => async req => {
+      match("/", async req => {
         const { redirect_uri } = readQuery(req);
 
         return merge(
@@ -25,7 +25,7 @@ export default fork(
             withCookie("redirect_uri", redirect_uri, { maxAge: 60 })
         );
       }),
-      match("/callback", () => async req => {
+      match("/callback", async req => {
         const { code } = readQuery(req);
         const { redirect_uri } = readCookie(req);
 
