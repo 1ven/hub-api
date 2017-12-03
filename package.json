@@ -4,8 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "start": "eval $(cat .env.staging) nodemon --exec babel-node -- ./src/index.js",
-    "pg": "postgres -D /usr/local/var/postgres -p 5432"
+    "start": "eval $(cat .env.staging) nodemon --exec babel-node -- ./src/index.js"
   },
   "devDependencies": {
     "@babel/core": "^7.0.0-beta.32",
