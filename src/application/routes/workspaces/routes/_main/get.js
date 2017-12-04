@@ -1,7 +1,7 @@
 import { merge, withStatus } from "litera";
 import { withJson } from "litera-response-body";
 
-export default async (req, { user, db }) => {
+export default async (req, { db }) => {
   // to model
   const result = await db
     .from("workspaces as w")
