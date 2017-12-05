@@ -1,0 +1,1 @@
+- Consider using graphql on a server instead of rest. In that case, we can avoid overfetching and selectors, keeping information regarding business logic just inside of models
