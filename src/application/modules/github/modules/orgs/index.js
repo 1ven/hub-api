@@ -1,4 +1,4 @@
-import * as hoa from "./hoa";
 import * as selectors from "./selectors";
+import * as models from "./models";
 
-export { hoa, selectors };
+export { selectors, models };
