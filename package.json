@@ -31,6 +31,7 @@
     "litera-error-handler": "^1.1.10",
     "litera-querystring": "^1.1.17",
     "litera-redirect": "^1.7.0",
+    "litera-request-body": "^1.1.13",
     "litera-response-body": "^1.9.0",
     "litera-router": "^1.0.2",
     "node-fetch": "^1.7.3",
