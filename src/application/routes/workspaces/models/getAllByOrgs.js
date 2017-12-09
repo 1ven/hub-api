@@ -1,9 +1,7 @@
-import { selectors, models } from "application/modules/github/modules/orgs";
+import { models } from "application/modules/github/modules/orgs";
 
-export default async (db, token) => {
-  const orgs = await models.getUserOrgs(token);
-  return await db
+export default async (db, token) =>
+  await db
     .select("*")
     .from("workspaces")
-    .whereIn("assigned_to", selectors.ids(orgs));
-};
+    .whereIn("assigned_to", await models.getUserOrgsIds(token));

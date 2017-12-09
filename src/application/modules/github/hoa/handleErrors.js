@@ -1,7 +1,7 @@
 import { merge, withStatus } from "litera";
 import { withJson } from "litera-response-body";
-import { GitHubError } from "../utils/fetchApi";
 
+// TODO: handle errors from graphql instead
 export default atom => async (req, data) => {
   try {
     return await atom(req, data);

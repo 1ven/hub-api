@@ -1,12 +1,39 @@
-import { equals, compose, path, prop, map, filter, pick } from "ramda";
-import { models as userModels } from "application/modules/github/modules/user";
-import { utils } from "application/modules/github";
-import { ROLES } from "./constants";
+import { compose, path, map } from "ramda";
 import { graphQl, gql } from "core/graphql";
 
-export const getUserOrgs = async token =>
-  await utils.fetchApi({
-    path: "/user/orgs",
-    method: "GET",
+export const getUserOrgsIds = async token =>
+  await graphQl(
+    gql`
+      query {
+        viewer {
+          organizations(first: 50) {
+            edges {
+              node {
+                id
+              }
+            }
+          }
+        }
+      }
+    `,
     token
-  });
+  ).then(
+    compose(
+      map(path(["node", "id"])),
+      path(["viewer", "organizations", "edges"])
+    )
+  );
+
+export const userCanAdministerOrg = async (org, token) =>
+  await graphQl(
+    gql`
+      query {
+        viewer {
+          organization(login: "1ven-org") {
+            viewerCanAdminister
+          }
+        }
+      }
+    `,
+    token
+  ).then(path(["viewer", "organization", "viewerCanAdminister"]));
