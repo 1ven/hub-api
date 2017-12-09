@@ -1,1 +1,1 @@
-export { default as getAllByOrgs } from "./getAllByOrgs";
+export { default as getAll } from "./getAll";
