@@ -1,6 +1,8 @@
+import { equals, compose, path, prop, map, filter, pick } from "ramda";
 import { models as userModels } from "application/modules/github/modules/user";
 import { utils } from "application/modules/github";
 import { ROLES } from "./constants";
+import { graphQl, gql } from "core/graphql";
 
 export const getUserOrgs = async token =>
   await utils.fetchApi({
@@ -8,20 +10,3 @@ export const getUserOrgs = async token =>
     method: "GET",
     token
   });
-
-export const getUserAdminOrgs = async token => {
-  const user = await userModels.getUser(token);
-  const orgs = await getUserOrgs(token);
-
-  return (await Promise.all(
-    orgs.map(org =>
-      utils.fetchApi({
-        path: `/orgs/${org.login}/memberships/${user.login}`,
-        method: "GET",
-        token
-      })
-    )
-  ))
-    .filter(org => org.role === ROLES.ADMIN)
-    .map(m => m.organization);
-};
