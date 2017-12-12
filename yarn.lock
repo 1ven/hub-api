@@ -520,8 +520,8 @@ apollo-cache@^1.0.2:
     apollo-utilities "^1.0.3"
 
 apollo-client@^2.0.4:
-  version "2.0.4"
-  resolved "https://registry.yarnpkg.com/apollo-client/-/apollo-client-2.0.4.tgz#425c2944e068602b4e002b3f1ad08ddd893f1a0c"
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/apollo-client/-/apollo-client-2.1.0.tgz#1d3716cb5d4ad70c3a4147da629fdfcb53925e7b"
   dependencies:
     "@types/zen-observable" "^0.5.3"
     apollo-cache "^1.0.2"

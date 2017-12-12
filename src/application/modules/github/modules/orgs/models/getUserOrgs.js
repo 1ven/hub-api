@@ -1,24 +1,25 @@
-import { compose, path, prop, map } from "ramda";
+import { compose, path, map } from "ramda";
 import { graphQl, gql } from "core/graphql";
 
-export default token =>
-  graphQl(
-    gql`
-      query {
-        viewer {
-          organizations(first: 50) {
-            edges {
-              node {
-                id
-                login
-                viewerCanAdminister
+export default async token =>
+  compose(
+    map(path(["node", "login"])),
+    path(["viewer", "organizations", "edges"])
+  )(
+    await graphQl(
+      gql`
+        query {
+          viewer {
+            organizations(first: 50) {
+              edges {
+                node {
+                  login
+                }
               }
             }
           }
         }
-      }
-    `,
-    token
-  ).then(
-    compose(map(prop("node")), path(["viewer", "organizations", "edges"]))
+      `,
+      token
+    )
   );

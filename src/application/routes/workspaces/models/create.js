@@ -14,6 +14,7 @@ export default async (workspace, db, token) => {
       .into("workspaces")
       .returning("*");
   } catch (err) {
+    // TODO: Ideally, we should not handle errors in models, should have database error handler instead, to handle these cases, unless we need to throw specific errors
     if (utils.isUniqueViolation(err)) {
       throw new errors.ModelError("Workspace is already exists");
     }

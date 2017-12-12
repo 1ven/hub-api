@@ -1,12 +1,21 @@
-import { find, propEq, isNil } from "ramda";
-import getUserOrgs from "./getUserOrgs";
+import { defaultTo, compose, isNil, path } from "ramda";
+import { graphQl, gql } from "core/graphql";
 
-export default async (orgId, token) => {
-  const foundOrg = find(propEq("id", orgId), await getUserOrgs(token));
-
-  if (isNil(foundOrg)) {
-    return false;
-  }
-
-  return foundOrg.viewerCanAdminister;
-};
+export default async (orgName, token) =>
+  compose(
+    defaultTo(false),
+    path(["viewer", "organization", "viewerCanAdminister"])
+  )(
+    await graphQl(
+      gql`
+      query {
+        viewer {
+          organization(login: "${orgName}") {
+            viewerCanAdminister
+          }
+        }
+      }
+    `,
+      token
+    )
+  );

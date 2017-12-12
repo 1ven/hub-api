@@ -22,7 +22,9 @@ export const graphQl = async (query, token) => {
       })
       .then(prop("data"));
   } catch (err) {
-    console.log(err.networkError.response);
+    // do not handle errors here, do that in github error handler instead
+    console.log(err);
+    throw err;
   }
 };
 
