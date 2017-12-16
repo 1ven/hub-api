@@ -4,13 +4,12 @@ import * as workspaces from "modules/workspaces";
 
 // prettier-ignore
 export default match("/v1*", fork(
-  match("/user*", fork(
-    match("/auth*", fork(
-      match("/github*", method("GET", fork(
-        match("/", userAuthGithub.controllers.getCode),
-        match("/callback", userAuthGithub.controllers.getToken)
-      )))
-    ))
+  match("/user", () => ({ status: 200 })),
+  match("/auth*", fork(
+    match("/github*", method("GET", fork(
+      match("/", userAuthGithub.controllers.getCode),
+      match("/callback", userAuthGithub.controllers.getToken)
+    )))
   )),
   match("/workspaces", fork(
     method("GET", workspaces.controllers.getAll),
