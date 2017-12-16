@@ -1,10 +1,11 @@
 import { fork, match, method } from "litera-router";
 import * as userAuthGithub from "modules/user/auth/github";
+import * as userProfile from "modules/user/profile";
 import * as workspaces from "modules/workspaces";
 
 // prettier-ignore
 export default match("/v1*", fork(
-  match("/user", () => ({ status: 200 })),
+  match("/user", userProfile.controllers.getProfile),
   match("/auth*", fork(
     match("/github*", method("GET", fork(
       match("/", userAuthGithub.controllers.getCode),
