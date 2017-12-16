@@ -1,4 +1,4 @@
-import { models } from "application/modules/github/modules/orgs";
+import { models } from "modules/github";
 
 export default async (db, token) =>
   await db

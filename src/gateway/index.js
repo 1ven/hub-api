@@ -4,7 +4,7 @@ import errorHandler from "litera-error-handler";
 import cors from "litera-cors";
 import { hoa as modelsHoa } from "core/models";
 import { hoa as dbHoa } from "core/database";
-import { hoa as githubHoa } from "./modules/github";
+import { hoa as githubHoa } from "modules/github";
 import routes from "./routes";
 
 export default compose(

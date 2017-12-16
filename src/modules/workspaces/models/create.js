@@ -1,7 +1,7 @@
 import { pick } from "ramda";
 import { utils } from "core/database";
 import { errors } from "core/models";
-import { models } from "application/modules/github/modules/orgs";
+import { models } from "modules/github";
 
 export default async (workspace, db, token) => {
   if (!await models.userCanAdministerOrg(workspace.assigned_to, token)) {
