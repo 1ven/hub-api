@@ -1,10 +1,10 @@
 import { pick } from "ramda";
 import { utils } from "core/database";
 import { errors } from "core/models";
-import { models } from "modules/github";
+import { userCanAdministerOrg } from "application/models/github";
 
 export default async (workspace, db, token) => {
-  if (!await models.userCanAdministerOrg(workspace.assigned_to, token)) {
+  if (!await userCanAdministerOrg(workspace.assigned_to, token)) {
     throw new errors.NotAllowed();
   }
 

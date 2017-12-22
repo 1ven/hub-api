@@ -27,7 +27,7 @@
     "knex": "^0.14.2",
     "litera": "^1.0.5",
     "litera-cookie": "^1.6.0",
-    "litera-cors": "^1.0.2",
+    "litera-cors": "^1.9.7",
     "litera-error-handler": "^1.1.10",
     "litera-querystring": "^1.1.17",
     "litera-redirect": "^1.7.0",

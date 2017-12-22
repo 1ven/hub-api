@@ -12,6 +12,8 @@ export default compose(
   githubHoa.errorHandler,
   modelsHoa.errorHandler,
   dbHoa.errorHandler,
-  cors(),
+  cors({
+    allowedHeaders: ["Content-type", "Accept", "Authorization"]
+  }),
   router
 )(routes);

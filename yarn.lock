@@ -1701,9 +1701,9 @@ litera-cookie@^1.6.0:
   dependencies:
     cookie "^0.3.1"
 
-litera-cors@^1.0.2:
-  version "1.8.1"
-  resolved "https://registry.yarnpkg.com/litera-cors/-/litera-cors-1.8.1.tgz#958f0fbd6fa9d6a0d433361cad56e26fe2404054"
+litera-cors@^1.9.7:
+  version "1.9.7"
+  resolved "https://registry.yarnpkg.com/litera-cors/-/litera-cors-1.9.7.tgz#b933c2ec4a2e5aa9c257f3112c0aeff74e8a9289"
 
 litera-error-handler@^1.1.10:
   version "1.9.1"
