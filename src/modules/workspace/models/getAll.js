@@ -1,4 +1,4 @@
-import { getUserOrgs } from "application/models/github";
+import { getUserOrgs } from "modules/github/models";
 
 export default async (db, token) =>
   await db

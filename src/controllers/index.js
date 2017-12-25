@@ -1,11 +1,20 @@
 import { compose } from "ramda";
-import router from "litera-router";
+import router, { match, fork } from "litera-router";
 import errorHandler from "litera-error-handler";
 import cors from "litera-cors";
 import { hoa as modelsHoa } from "core/models";
 import { hoa as dbHoa } from "core/database";
-import * as githubHoa from "application/hoa/github";
-import routes from "./routes";
+import * as githubHoa from "modules/github/hoa";
+import auth from "./auth";
+import user from "./user";
+import workspaces from "./workspaces";
+
+// prettier-ignore
+const app = match("/v1*", fork(
+  match('/auth*', auth),
+  match('/user*', user),
+  match('/workspaces*', workspaces),
+))
 
 export default compose(
   errorHandler(),
@@ -16,4 +25,4 @@ export default compose(
     allowedHeaders: ["Content-type", "Accept", "Authorization"]
   }),
   router
-)(routes);
+)(app);

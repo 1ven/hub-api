@@ -1,6 +1,6 @@
 import { merge, withStatus } from "litera";
 import { withJson } from "litera-response-body";
-import { getProfile } from "../models";
+import { getProfile } from "modules/user/models";
 
 export default async (req, { db }) =>
   merge(
