@@ -8,6 +8,8 @@ export default async (workspace, db, token) => {
     throw new errors.NotAllowed();
   }
 
+  // TODO: check whether user is having admin access in all `repositories`
+
   try {
     return (await db
       .insert(pick(["slug", "assigned_to"], workspace))
