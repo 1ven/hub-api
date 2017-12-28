@@ -3,16 +3,22 @@ import { utils } from "core/database";
 import { errors } from "core/models";
 import { userCanAdministerOrg } from "modules/github/models";
 
-export default async (workspace, db, token) => {
-  if (!await userCanAdministerOrg(workspace.assigned_to, token)) {
+export default async ({ assigned_to, slug, repos }, db, token) => {
+  if (!await userCanAdministerOrg(assigned_to, token)) {
     throw new errors.NotAllowed();
   }
 
-  // TODO: check whether user is having admin access in all `repositories`
+  // TODO: check whether user is having admin access in all `repos`
+
+  console.log(assigned_to, slug, typeof repos);
 
   try {
     return (await db
-      .insert(pick(["slug", "assigned_to"], workspace))
+      .insert({
+        slug,
+        assigned_to,
+        repos: JSON.stringify(repos)
+      })
       .into("workspaces")
       .returning("*"))[0];
   } catch (err) {
