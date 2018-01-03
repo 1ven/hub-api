@@ -3,7 +3,7 @@ exports.up = function(knex, Promise) {
     .createTable("sprints", function(table) {
       table.increments("id").primary();
       table.string("title").notNullable();
-      table.integer("assigned_to").references("workspaces.id");
+      table.integer("workspace_id").references("workspaces.id");
     })
     .createTable("sprints_issues", function(table) {
       table.integer("sprint_id").references("sprints.id");
