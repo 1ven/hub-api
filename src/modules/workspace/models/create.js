@@ -10,8 +10,6 @@ export default async ({ assigned_to, slug, repos }, db, token) => {
 
   // TODO: check whether user is having admin access in all `repos`
 
-  console.log(assigned_to, slug, typeof repos);
-
   try {
     return (await db
       .insert({
